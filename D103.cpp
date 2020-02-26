@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cmath>
 #include <cstdio> 
 #define PI 3.14159265
@@ -11,6 +10,6 @@ int main() {
 	grad = c * PI / 180;
 	ret = sin(grad);
 	ret = ret * a * b;
-	printf("%.3lf ", ret/2);
+	printf("%.3lf\n", ret/2);
 	return 0;
 }
