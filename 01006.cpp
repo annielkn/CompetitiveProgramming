@@ -16,6 +16,6 @@ int main() {
 			oct += 250;
 		}
 	}
-	printf("$%d", 250*cnt);
+	printf("$%d\n", 250*cnt);
 	return 0;
 }
