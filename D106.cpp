@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	int N = 0;
 	scanf("%d", &N);
-	if (N < 11 || N > 13){
+	if (N % 100 != 11 && N % 100 != 12 && N % 100 != 13){
 		switch(N % 10) {
 			case 1: {printf("%dst", N); break;}
 			case 2: {printf("%dnd", N); break;}
