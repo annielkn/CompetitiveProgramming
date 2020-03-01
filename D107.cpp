@@ -4,9 +4,10 @@
 using namespace std;
 
 int main() {
-	int N = 0, sq = 0, tri = 0, r = 0;
+	long N = 0, r = 0;
+	int sq = 0, tri = 0;
 	double rt = 0.00;
-	scanf("%d", &N);
+	scanf("%lld", &N);
 	rt = sqrt(N);
 	r = sqrt(N);
 	if (r - rt == 0) {
