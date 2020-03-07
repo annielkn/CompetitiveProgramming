@@ -9,4 +9,6 @@ for i in range(len(temp)):
 	if (x<mini):
 		mini = x
 		minikey = temp[i]
+	if (x==mini and temp[i]>minikey):
+			minikey = temp [i]
 print(minikey)
