@@ -32,7 +32,7 @@ while (m<0):
 if (h>24):
 	h = h % 24
 
-if (h<0):
+while (h<0):
 	h += 24
 
 if (h<10 and m<10):
