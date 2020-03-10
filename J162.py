@@ -20,11 +20,21 @@ z2 = time_zones.get(zone2)
 h += int(z2-z1)
 temp2 = int(((z2-z1)-int(z2-z1))*60)
 m += temp2
+
 if (m>60):
 	h += int(m/60)
 	m = m % 60
+
+while (m<0):
+	m += 60
+	h -= 1
+
 if (h>24):
 	h = h % 24
+
+if (h<0):
+	h += 24
+
 if (h<10 and m<10):
 	print ("0"+str(h)+" 0"+str(m))
 elif (h<10):
