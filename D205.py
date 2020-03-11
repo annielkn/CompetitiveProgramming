@@ -1,14 +1,14 @@
 #factors
 from math import sqrt
 
-def prime(x):
+def prime(w):
 	i = 1
-	if x == 2:
+	if w == 2:
 		return True
-	elif x > 2:
-		while i <= sqrt(x):
+	elif w > 2:
+		while i <= sqrt(w):
 			i+=1
-			if x % i == 0:
+			if w % i == 0:
 				return False
 				break
 		else:
@@ -32,7 +32,7 @@ else:
 	for n in range(len(factors)):
 		if prime(factors[n]):
 			primef.append(factors[n])
-	primef = sorted(primef)
+	#primef = sorted(primef)
 	print (str(x)+"=", end = "")
 	for n in range(len(primef)-1):
 		print (primef[n], end = "*")
