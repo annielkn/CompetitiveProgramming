@@ -23,8 +23,6 @@ if prime(t):
 	print (str(t)+"="+str(t))
 else:
 	while prime(t) == False:
-		if i == sqrt(x):
-			factors.append(i)
 		while t % i == 0:
 			factors.append(i)
 			t = int(t/i)
