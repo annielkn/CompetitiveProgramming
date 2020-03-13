@@ -9,13 +9,13 @@ while x <= int((n-1)/2):
 	if ((mid+x != 0) and (mid-x != 0)):
 		shit.append(mid+x)
 		shit.append(mid-x)
-	x += 1
+	x += 2
 	
 shit = sorted(shit)
 if (sum(shit) < m):
-	shit[len(shit)-1] += (m-sum(shit))
+	shit[len(shit)-1] += abs(m-sum(shit))
 if (sum(shit) > m):
-	shit[0] += (m-sum(shit))
+	shit[0] -= abs(m-sum(shit))
 if (len(shit)-1 == n):
 	shit[len(shit)-2] += shit[len(shit)-1] 
 if (len(shit)+1 == n):
