@@ -1,39 +1,36 @@
-#factors
+#d205 
 from math import sqrt
-
-def prime(w):
+def prime(x):
 	i = 1
-	if w == 2:
+	if x == 2:
 		return True
-	elif w > 2:
-		while i <= sqrt(w):
+	elif x > 2:
+		while i <= sqrt(x):
 			i+=1
-			if w % i == 0:
+			if x % i == 0:
 				return False
 				break
 		else:
 			return True
-
-x = int(input())
-t = x
-factors = []
-primef = []
-i = 2
-if prime(t):
-	print (str(t)+"="+str(t))
+			
+def find_factors(m):
+	n = m #m i s the number where we find factors for m, but we are not going to directly change m
+	i = 1
+	v = 0 #maximum value
+	while i <= n:
+		i+=1
+		while n % i == 0:
+			if i >= v and prime(i) != False: 
+				v = i
+				if (n / i == 1):
+					print (i)
+				else:
+					print (i, end = "*")
+				n = n / i
+				
+x = int(input(""))
+if prime(x) == True:
+	print (str(x)+"="+str(x))
 else:
-	while prime(t) == False:
-		while t % i == 0:
-			factors.append(i)
-			t = int(t/i)
-		i += 1
-	factors.append(t)
-
-	for n in range(len(factors)):
-		if prime(factors[n]):
-			primef.append(factors[n])
-	#primef = sorted(primef)
-	print (str(x)+"=", end = "")
-	for n in range(len(primef)-1):
-		print (primef[n], end = "*")
-	print (primef[len(primef)-1])
+	print (x, end = "=")
+	find_factors(x)
